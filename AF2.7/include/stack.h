@@ -2,6 +2,7 @@
 #define STACK_H
 
 /* Tipo opaco - ficheiro para estrutura incompleta */
+/* Cliente não vê os campos internos, só o ponteiro*/
 typedef struct Stack *StackPtr;
 
 /*Cria uma pilha vazia com capacidade N*/
