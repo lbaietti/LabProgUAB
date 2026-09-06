@@ -13,7 +13,7 @@ typedef struct{
 
 int contacto_criar(Contacto *novo, const char *nome, const char *email, const char* telefone);
 
-void contacto_mostrar(Contacto *contacto);
+void contacto_mostrar(const Contacto *contacto);
 
 
 
