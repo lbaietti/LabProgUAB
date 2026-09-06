@@ -1,8 +1,11 @@
 #ifndef IO_H
 #define IO_H
 
+#include "contacto.h"
 
-void io_ler(void);
+int io_guardar(const char *ficheiro, const Contacto contactos[], int total);
+
+int io_carregar(const char *ficheiro, Contacto contactos[], int max);
 
 
 
