@@ -1,9 +1,12 @@
-CC=g++
-CFLAGS=-Wall -Wextra -IInclude
-OBJS=obj/plantas.o obj/regas.o obj/tarefas.o obj/main.o
+CC = gcc
+CFLAGS = -Wall -Wextra -Wpedantic -I./include
+OBJS = bin/senha.o bin/main.o 
 
-greentrack.exe: $(OBJS)
-	$(CC) -o $@ $^
+#Do Not DEBUG can be used for jumping across tests and finish to read all the code from testar_senha.c
 
-obj/%.o: src/%.cpp
-	$(CC) $(CFLAGS) -c $< -o $@
+app: $(OBJS)
+		$(CC) -o $@ $^
+
+bin/%.o: ./src/%.c ./tests/%.c
+		@mkdir -p bin
+		$(CC) $(CFLAGS) -c $< -o $@
