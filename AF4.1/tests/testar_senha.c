@@ -1,6 +1,7 @@
 #include "../include/senha.h"
 #include <string.h>
 #include <assert.h>
+#include <stdio.h>
 
 int classificar_senha(int comprimento, char *classe);
 
@@ -26,3 +27,4 @@ void testar_senha(){
     classificar_senha(8, buf); assert(strcmp(buf, "Forte")  == 0);
     classificar_senha(16, buf); assert(strcmp(buf, "Muito Forte") == 0);
 }
+
