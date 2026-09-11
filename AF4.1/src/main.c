@@ -1,9 +1,6 @@
 #include <stdio.h>
+#include <assert.h>
 #include "../include/senha.h"
-
-int classificar_senha(int comprimento, char *classe);
-
-void testar_senha();
 
 int main(){
     testar_senha();
