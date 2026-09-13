@@ -7,5 +7,5 @@
  */
 int calcular_pontuacao_nivel(int pontos, int bonus, int penalizacao) {
     int com_bonus = aplicar_bonus(pontos, bonus);
-    return aplicar_penalizacao(pontos, penalizacao); /* ERRO: deveria usar 'com_bonus', não 'pontos' */
+    return aplicar_penalizacao(com_bonus, penalizacao); /* ERRO: deveria usar 'com_bonus', não 'pontos' */
 }
