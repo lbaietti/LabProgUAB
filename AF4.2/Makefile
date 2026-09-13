@@ -1,14 +1,16 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Wshadow -I./include
-TESTS = tests/test_integracao.c tests/test_pontuacao.c
+OBJS = src/pontuacao.c
 
-all: runTest
+testeIntegracao: $(OBJS) src/nivel.c tests/test_integracao.c 
+			$(CC) $(CFLAGS) $(OBJS) src/nivel.c tests/test_integracao.c -o testeIntegracao
 
-runTest: tests/test_integracao.c tests/test_pontuacao.c $(TESTS)
-			$(CC) $(CFLAGS) tests/test_integracao.c tests/test_pontuacao.c $(TESTS) -o runTest
+testeUnidade: $(OBJS) tests/test_pontuacao.c 
+			$(CC) $(CFLAGS) $(OBJS) tests/test_pontuacao.c -o testePontuacao
 
-clean:
-	-rm -f bin/test_integracao bin/test_pontuacao
+
+clean: rm testeIntegracao testePontuacao
+
 
 
 
