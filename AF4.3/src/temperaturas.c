@@ -1,4 +1,5 @@
-#include "temperaturas.h"
+#include "../include/temperaturas.h"
+#include <stdio.h>
 
 int registar_temperatura(float *lista, int capacidade, int indice, float valor) {
     if (lista == NULL || capacidade <= 0 || indice < 0 || indice >= capacidade)
@@ -8,7 +9,7 @@ int registar_temperatura(float *lista, int capacidade, int indice, float valor) 
 }
 
 int media_temperaturas(float *lista, int n, float *resultado) {
-    if (lista == NULL || n <= 0)
+    if (lista == NULL || n <= 0 || resultado == NULL)
         return 0;
     float soma = 0;
     for (int i = 0; i < n; i++)

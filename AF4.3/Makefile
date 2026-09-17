@@ -1,4 +1,4 @@
-CC     = gcc
+CC = gcc
 CFLAGS = -Wall -std=c11 -Iinclude
 
 all: tests/test_temperaturas

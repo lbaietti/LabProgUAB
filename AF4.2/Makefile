@@ -9,7 +9,8 @@ testeUnidade: $(OBJS) tests/test_pontuacao.c
 			$(CC) $(CFLAGS) $(OBJS) tests/test_pontuacao.c -o testePontuacao
 
 
-clean: rm testeIntegracao testePontuacao
+clean: 
+	rm -f testeIntegracao testePontuacao
 
 
 
