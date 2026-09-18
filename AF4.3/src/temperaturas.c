@@ -8,12 +8,17 @@ int registar_temperatura(float *lista, int capacidade, int indice, float valor) 
     return 1;
 }
 
+/**
+ * @todo
+ * Implementar resultado == NULL como pré-condição de contrato
+ */
 int media_temperaturas(float *lista, int n, float *resultado) {
-    if (lista == NULL || n <= 0 || resultado == NULL)
-        return 0;
+    if (lista == NULL || n <= 0 || resultado == NULL) return 0;
+
     float soma = 0;
-    for (int i = 0; i < n; i++)
-        soma += lista[i];
-    *resultado = soma / n; /* ERRO: resultado pode ser NULL — comportamento indefinido */
-    return 1;
+    for (int i = 0; i < n; i++) soma += lista[i];
+    *resultado = soma / n; /*Erro anterior corrigido com o registo de resultado == NULL na pré-condição do contrato*/
+    return 1;               /*sucesso*/
 }
+
+
